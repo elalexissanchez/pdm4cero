@@ -1,0 +1,89 @@
+========================================================================
+  PDM 4CERO — ESTRUCTURA DE ARCHIVOS DEL SITIO WEB
+  Versión modular (la que se sube al hosting)
+========================================================================
+
+pdm4cero/                              <- carpeta raiz (subir a la raiz publica del dominio)
+|
+|-- index.html                         Pagina de inicio
+|-- servicios.html                     Indice general de servicios
+|-- contacto.html                      Pagina de contacto (formulario + mapa)
+|-- img-favicon.svg                    Icono de marca (pestana del navegador y logo)
+|
+|-- css/
+|   `-- style.css                      TODOS los estilos del sitio (uno solo, compartido)
+|
+|-- js/
+|   `-- main.js                        TODO el JavaScript (animacion LiDAR, menu, formulario)
+|
+|-- servicios/                         Subpaginas de cada servicio
+|   |-- mapeo-3d-lidar.html
+|   |-- mantenimiento-infraestructura.html
+|   `-- consultoria-proyectos.html
+|
+`-- img/                               Imagenes
+    |-- about.svg                      Ilustracion seccion "Quienes somos" (inicio)
+    |-- lidar.svg                      Ilustracion subpagina de mapeo 3D
+    |-- medical.svg                    Ilustracion subpagina de mantenimiento
+    |-- consulting.svg                 Ilustracion subpagina de consultoria
+    |-- og-image.png                   Miniatura al compartir el enlace (redes, WhatsApp)
+    `-- og-source.svg                  Archivo fuente del que se genero og-image.png (opcional)
+
+
+========================================================================
+  REGLAS PARA QUE TODO FUNCIONE
+========================================================================
+
+1. Respetar EXACTAMENTE estos nombres y esta jerarquia de carpetas.
+   Los HTML enlazan los demas archivos por ruta relativa; si se mueve
+   o renombra una carpeta, se rompen los enlaces.
+
+2. Rutas que usan los archivos:
+   - Paginas de la raiz (index, servicios, contacto):
+       css/style.css   |   js/main.js   |   img/...
+   - Subpaginas dentro de servicios/:
+       ../css/style.css   |   ../js/main.js   |   ../img/...
+       (el "../" significa "subir un nivel")
+   Esto ya esta resuelto en el codigo. Solo no alterar la estructura.
+
+3. Donde subirlo en el hosting:
+   Toda la carpeta pdm4cero/ va a la raiz publica del dominio
+   (public_html, www o htdocs, segun el proveedor), de modo que:
+       index.html              ->  https://pdm4cero.com.mx/
+       servicios/mapeo-3d-lidar.html
+                               ->  https://pdm4cero.com.mx/servicios/mapeo-3d-lidar.html
+
+4. Notas:
+   - og-source.svg es OPCIONAL en el servidor (solo es el origen
+     editable de la miniatura social). og-image.png si es necesario.
+   - style.css es uno solo para las 6 paginas: un cambio de color o
+     tipografia ahi se refleja en todo el sitio.
+
+========================================================================
+  INVENTARIO COMPLETO (14 archivos)
+========================================================================
+
+RAIZ
+  index.html
+  servicios.html
+  contacto.html
+  img-favicon.svg
+
+css/
+  style.css
+
+js/
+  main.js
+
+servicios/
+  mapeo-3d-lidar.html
+  mantenimiento-infraestructura.html
+  consultoria-proyectos.html
+
+img/
+  about.svg
+  lidar.svg
+  medical.svg
+  consulting.svg
+  og-image.png
+  og-source.svg

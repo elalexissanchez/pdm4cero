@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="'IBM Plex Mono', monospace">
+  <defs>
+    <linearGradient id="bgA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1d33"/>
+      <stop offset="1" stop-color="#0a1424"/>
+    </linearGradient>
+    <linearGradient id="scanA" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#28e0b0" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#28e0b0" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#4ea8ff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0.7" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#28e0b0" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#28e0b0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgA)"/>
+  <rect width="800" height="600" fill="url(#glowA)"/>
+
+  <!-- retícula -->
+  <g stroke="#21344f" stroke-width="1" opacity="0.5">
+    <path d="M0 100H800M0 200H800M0 300H800M0 400H800M0 500H800"/>
+    <path d="M100 0V600M200 0V600M300 0V600M400 0V600M500 0V600M600 0V600M700 0V600"/>
+  </g>
+
+  <!-- terreno escaneado: nube de puntos en perspectiva -->
+  <g fill="#28e0b0">
+    <!-- filas generadas: ondulación -->
+    <g opacity="0.9">
+      <circle cx="120" cy="420" r="3"/><circle cx="180" cy="415" r="3"/><circle cx="240" cy="425" r="3.2"/><circle cx="300" cy="418" r="3"/><circle cx="360" cy="430" r="3.4"/><circle cx="420" cy="422" r="3"/><circle cx="480" cy="432" r="3.2"/><circle cx="540" cy="424" r="3"/><circle cx="600" cy="434" r="3.4"/><circle cx="660" cy="426" r="3"/>
+    </g>
+    <g opacity="0.7" fill="#4ea8ff">
+      <circle cx="140" cy="370" r="2.6"/><circle cx="200" cy="366" r="2.6"/><circle cx="260" cy="374" r="2.8"/><circle cx="320" cy="368" r="2.6"/><circle cx="380" cy="378" r="3"/><circle cx="440" cy="370" r="2.6"/><circle cx="500" cy="380" r="2.8"/><circle cx="560" cy="372" r="2.6"/><circle cx="620" cy="382" r="3"/>
+    </g>
+    <g opacity="0.6">
+      <circle cx="160" cy="330" r="2.2"/><circle cx="220" cy="327" r="2.2"/><circle cx="280" cy="333" r="2.4"/><circle cx="340" cy="328" r="2.2"/><circle cx="400" cy="336" r="2.6"/><circle cx="460" cy="330" r="2.2"/><circle cx="520" cy="338" r="2.4"/><circle cx="580" cy="331" r="2.2"/>
+    </g>
+    <g opacity="0.45" fill="#4ea8ff">
+      <circle cx="180" cy="298" r="1.9"/><circle cx="240" cy="296" r="1.9"/><circle cx="300" cy="300" r="2"/><circle cx="360" cy="297" r="1.9"/><circle cx="420" cy="303" r="2.2"/><circle cx="480" cy="298" r="1.9"/><circle cx="540" cy="304" r="2"/>
+    </g>
+    <g opacity="0.32">
+      <circle cx="200" cy="272" r="1.6"/><circle cx="260" cy="271" r="1.6"/><circle cx="320" cy="274" r="1.7"/><circle cx="380" cy="272" r="1.6"/><circle cx="440" cy="276" r="1.8"/><circle cx="500" cy="273" r="1.6"/>
+    </g>
+  </g>
+
+  <!-- línea de barrido -->
+  <rect x="80" y="345" width="620" height="2" fill="url(#scanA)"/>
+
+  <!-- dispositivo/sensor estilizado -->
+  <g transform="translate(560,140)">
+    <rect x="-6" y="0" width="12" height="70" rx="3" fill="#16263f" stroke="#21344f"/>
+    <circle cx="0" cy="0" r="26" fill="#0f1d33" stroke="#28e0b0" stroke-width="2"/>
+    <circle cx="0" cy="0" r="14" fill="#0a1424" stroke="#4ea8ff" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="5" fill="#28e0b0"/>
+    <!-- haz -->
+    <path d="M0 0 L-180 230 L160 250 Z" fill="#28e0b0" opacity="0.06"/>
+    <path d="M0 0 L-180 230" stroke="#28e0b0" stroke-width="1" opacity="0.25" stroke-dasharray="4 4"/>
+    <path d="M0 0 L160 250" stroke="#28e0b0" stroke-width="1" opacity="0.25" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- etiqueta -->
+  <g>
+    <rect x="40" y="40" width="190" height="34" rx="4" fill="#0a1424" stroke="#21344f"/>
+    <circle cx="60" cy="57" r="4" fill="#28e0b0"/>
+    <text x="76" y="62" fill="#93a4bd" font-size="13" letter-spacing="1.5">SCAN · EN SITIO</text>
+  </g>
+  <text x="40" y="560" fill="#5a6b82" font-size="12" letter-spacing="2">PDM 4CERO · LEVANTAMIENTO LIDAR</text>
+</svg>

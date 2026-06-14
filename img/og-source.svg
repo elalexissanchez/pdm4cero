@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1d33"/><stop offset="1" stop-color="#0a1424"/>
+    </linearGradient>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#28e0b0"/><stop offset="1" stop-color="#4ea8ff"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.72" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#28e0b0" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#28e0b0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- retícula -->
+  <g stroke="#21344f" stroke-width="1" opacity="0.3">
+    <path d="M0 105H1200M0 210H1200M0 315H1200M0 420H1200M0 525H1200"/>
+    <path d="M150 0V630M300 0V630M450 0V630M600 0V630M750 0V630M900 0V630M1050 0V630"/>
+  </g>
+
+  <!-- nube de puntos derecha -->
+  <g fill="#28e0b0">
+    <g opacity="0.85">
+      <circle cx="800" cy="420" r="4"/><circle cx="860" cy="414" r="4"/><circle cx="920" cy="424" r="4.4"/><circle cx="980" cy="416" r="4"/><circle cx="1040" cy="428" r="4.4"/><circle cx="1100" cy="420" r="4"/>
+    </g>
+    <g opacity="0.65" fill="#4ea8ff">
+      <circle cx="820" cy="368" r="3.4"/><circle cx="880" cy="362" r="3.4"/><circle cx="940" cy="372" r="3.6"/><circle cx="1000" cy="364" r="3.4"/><circle cx="1060" cy="374" r="3.8"/><circle cx="1120" cy="366" r="3.4"/>
+    </g>
+    <g opacity="0.5">
+      <circle cx="840" cy="322" r="2.8"/><circle cx="900" cy="318" r="2.8"/><circle cx="960" cy="326" r="3"/><circle cx="1020" cy="320" r="2.8"/><circle cx="1080" cy="328" r="3"/>
+    </g>
+    <g opacity="0.36" fill="#4ea8ff">
+      <circle cx="860" cy="284" r="2.2"/><circle cx="920" cy="281" r="2.2"/><circle cx="980" cy="286" r="2.4"/><circle cx="1040" cy="282" r="2.2"/><circle cx="1100" cy="288" r="2.4"/>
+    </g>
+    <g opacity="0.24">
+      <circle cx="880" cy="252" r="1.8"/><circle cx="940" cy="250" r="1.8"/><circle cx="1000" cy="254" r="1.9"/><circle cx="1060" cy="251" r="1.8"/>
+    </g>
+  </g>
+  <rect x="760" y="343" width="420" height="2" fill="url(#grad)" opacity="0.7"/>
+
+  <!-- logo -->
+  <g transform="translate(90,80)">
+    <rect width="56" height="56" rx="11" fill="#0a1424" stroke="#21344f"/>
+    <g transform="translate(28,28)">
+      <circle r="15" fill="none" stroke="#28e0b0" stroke-width="2" opacity="0.4"/>
+      <circle r="9" fill="none" stroke="#28e0b0" stroke-width="2" opacity="0.7"/>
+      <circle cx="0" cy="-15" r="2.6" fill="#28e0b0"/><circle cx="15" cy="0" r="2.6" fill="#28e0b0"/><circle cx="0" cy="15" r="2.6" fill="#28e0b0"/><circle cx="-15" cy="0" r="2.6" fill="#28e0b0"/>
+      <circle r="3.6" fill="#4ea8ff"/>
+    </g>
+    <text x="74" y="26" fill="#e8eef7" font-size="30" font-weight="700" letter-spacing="-1">PDM</text>
+    <text x="140" y="26" fill="#28e0b0" font-size="30" font-weight="700" letter-spacing="-1">4Cero</text>
+    <text x="74" y="48" fill="#93a4bd" font-size="13" letter-spacing="3" font-family="monospace">TECNOLOGÍA DE PRECISIÓN</text>
+  </g>
+
+  <!-- titular -->
+  <text x="90" y="320" fill="#e8eef7" font-size="68" font-weight="700" letter-spacing="-2">Capturamos lo físico.</text>
+  <text x="90" y="392" fill="url(#grad)" font-size="68" font-weight="700" letter-spacing="-2">Entregamos decisiones.</text>
+
+  <!-- subtítulo -->
+  <text x="90" y="448" fill="#93a4bd" font-size="24">Mapeo 3D LiDAR · Mantenimiento médico · Consultoría tecnológica</text>
+
+  <!-- pie -->
+  <g font-family="monospace">
+    <rect x="90" y="500" width="2" height="40" fill="#28e0b0"/>
+    <text x="110" y="518" fill="#e8eef7" font-size="16">Cobertura nacional · Oficinas en la Ciudad de México</text>
+    <text x="110" y="540" fill="#5a6b82" font-size="14">Distribuidores Emesent en México</text>
+  </g>
+</svg>
