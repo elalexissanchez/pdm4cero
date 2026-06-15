@@ -2,3 +2,4 @@
 _pgbackup/
 _pginfo/
 pinegrow.json
+**/.DS_Store
